@@ -1,9 +1,10 @@
-import requests, json, time, os, csv
-from bs4 import BeautifulSoup
-
 # 2023.3.13 
 # L0nelyC1ty,SummerOne
 # 登录补天，F12，网络，右键复制cookie值
+
+import requests, json, time, os, csv
+from bs4 import BeautifulSoup
+
 Cookie = 'your_cookie'
 headers = {
     'Origin': 'https://www.butian.net',
