@@ -1,6 +1,6 @@
 # 2023.3.13 
 # L0nelyC1ty,SummerOne
-# 登录补天，F12，网络，右键复制cookie值
+# 获取补天src
 
 import requests, json, time, os, csv
 from bs4 import BeautifulSoup
@@ -52,6 +52,7 @@ try:
 except Exception:
     print("\033[1;31m[-]company_id获取失败\033[0m")
     os._exit(0)
+    
 print("\033[1;32m[+]company_id获取完毕，共{0}个\033[0m".format(len(companyId)))
 headers = {
     'Host': 'www.butian.net',
@@ -69,7 +70,7 @@ headers = {
 print("\033[1;32m[+]正在获取url...\033[0m")
 with open("butian.csv", "w") as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(['url', 'name'])
+    #writer.writerow(['url', 'name'])
     total = len(companyId)
     for i in range(len(companyId)):
         params = {'cid': companyId[i]}

@@ -1,6 +1,6 @@
 #2023.3.13
 #Author:SummerOne
-#漏洞盒子
+#获取漏洞盒子src
 
 import requests, json, time, os, csv
 
@@ -38,7 +38,7 @@ print("\033[1;32m[+]总数目：{0}\033[0m".format(total))
 
 with open("vulbox.csv", "w") as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(['url', 'name'])
+    #writer.writerow(['url', 'name'])
     for i in range(1,int(total_page)+1):
         time.sleep(1)
         print("\033[1;33m{0}/{1} 正在获取厂商数据...\033[0m".format(i, total_page))
